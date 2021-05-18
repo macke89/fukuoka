@@ -6,6 +6,7 @@ const Intro = () => {
     return (
         <div className={IntroCSS.layout}>
             {/*TODO: Create Overlay*/}
+            {/*TODO: Take away Border*/}
             <div className={IntroCSS.imageWrapper}>
                 <img src={imageOne} alt="BackgroundImage" className={IntroCSS.imageWrapper_image}/>
             </div>
