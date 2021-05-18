@@ -1,0 +1,11 @@
+.place {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:nth-child(odd) {
+    background-color: darkcyan;
+  }
+}

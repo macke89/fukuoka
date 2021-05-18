@@ -1,0 +1,12 @@
+.place {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.place:nth-child(odd) {
+  background-color: darkcyan;
+}
+
+/*# sourceMappingURL=Places.module.css.map */

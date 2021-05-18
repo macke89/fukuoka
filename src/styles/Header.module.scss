@@ -1,0 +1,39 @@
+.layout {
+  //position: relative;
+  //width: clamp(100vw, 100vw, 100vw);
+  //height: clamp(100vh, 100vh, 100vh);
+  //background-color: transparent;
+}
+
+.menu {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  z-index: 90;
+  width: 100vw;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  background-color: #006c75;
+  z-index: 100;
+
+  &_text {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+

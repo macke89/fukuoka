@@ -1,0 +1,28 @@
+.layout {
+  box-sizing: border-box;
+  border: 10px solid white;
+}
+
+
+.imageWrapper {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  &_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+.textWrapper {
+  box-sizing: border-box;
+  height: 50vh;
+
+  &_text {
+    font-size: small;
+  }
+}

@@ -1,0 +1,27 @@
+.layout {
+  box-sizing: border-box;
+  border: 10px solid white;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 40vh;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.imageWrapper_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.textWrapper {
+  box-sizing: border-box;
+  height: 50vh;
+}
+.textWrapper_text {
+  font-size: small;
+}
+
+/*# sourceMappingURL=Intro.module.css.map */

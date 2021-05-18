@@ -1,0 +1,27 @@
+.container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  //border: 10px solid transparent;
+  overflow: hidden;
+  position: relative;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.overlay {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  border: 10px solid rgba(0, 76, 103, 0.59);
+  background-color: rgba(69, 176, 176, 0.27);
+}
