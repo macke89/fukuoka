@@ -4,9 +4,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.6s;
+  cursor: pointer;
 }
 .place:nth-child(odd) {
   background-color: darkcyan;
+  color: white;
+}
+.place:nth-child(odd):hover, .place:nth-child(odd) :focus {
+  background-color: white;
+  color: black;
+}
+.place:nth-child(even) {
+  color: darkcyan;
+}
+.place:nth-child(even):hover, .place:nth-child(even) :focus {
+  background-color: black;
+  color: white;
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: darkcyan;
+  color: white;
+}
+.modal_imageWrapper {
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal_imageWrapper_close {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 5%;
+}
+.modal_imageWrapper_image {
+  object-fit: cover;
+}
+.modal_text {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=Places.module.css.map */

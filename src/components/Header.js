@@ -8,8 +8,12 @@ import {useState} from "react";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
     const variants = {
-        open: { opacity: 1, y: 0 },
-        closed: { opacity: 0, y: "-100%" },
+        open: {
+            opacity: 1, y: 0, transition: {
+                type: 'tween'
+            }
+        },
+        closed: {opacity: 0, y: "-100%"},
     }
     const toggle = () => setIsOpen(isOpen => !isOpen);
 

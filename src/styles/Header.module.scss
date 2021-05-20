@@ -1,17 +1,10 @@
-.layout {
-  //position: relative;
-  //width: clamp(100vw, 100vw, 100vw);
-  //height: clamp(100vh, 100vh, 100vh);
-  //background-color: transparent;
-}
-
 .menu {
   position: absolute;
   top: 15px;
-  display: flex;
-  justify-content: center;
-  z-index: 90;
-  width: 100vw;
+  left: 50%;
+  transform: translate(-50%,0);
+  cursor: pointer;
+  z-index: 50;
 }
 
 .nav {

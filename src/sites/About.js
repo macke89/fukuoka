@@ -7,7 +7,6 @@ import {FaGithub} from 'react-icons/fa';
 import {IoIosText} from 'react-icons/io';
 
 
-
 const About = () => {
     return (
         <>
@@ -22,18 +21,24 @@ const About = () => {
                 </div>
             </div>
             <div className={AboutCSS.links}>
-                <div className={AboutCSS.links_text}>
+                <a
+                    href="https://www.linkedin.com/in/markus-oppelt-2842831b8/" target="_blank" rel="noreferrer"
+                    className={AboutCSS.links_text}>
                     <FaLinkedinIn size={'30px'}/>
-                    <a href="https://www.linkedin.com/in/markus-oppelt-2842831b8/" target="_blank">LinkedIn</a>
-                </div>
-                <div className={AboutCSS.links_text}>
+                    <div>LinkedIn</div>
+                </a>
+                <a
+                    href="https://mo-webdesign.com/" target="_blank" rel="noreferrer"
+                    className={AboutCSS.links_text}>
                     <HiHome size={'30px'}/>
-                    <a href="https://mo-webdesign.com/" target="_blank">Portfolio</a>
-                </div>
-                <div className={AboutCSS.links_text}>
+                    <div>Portfolio</div>
+                </a>
+                <a
+                    href="https://github.com/macke89" target="_blank" rel="noreferrer"
+                    className={AboutCSS.links_text}>
                     <FaGithub size={'30px'}/>
-                    <a href="https://github.com/macke89" target="_blank">GitHub</a>
-                </div>
+                    <div>GitHub</div>
+                </a>
             </div>
         </>
     );

@@ -1,0 +1,42 @@
+.layout {
+  z-index: 90;
+  overflow: hidden;
+  background-color: darkcyan;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &_close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 5%;
+  }
+
+  &_image {
+    object-fit: contain;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.arrows {
+
+  &_right {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+  }
+
+  &_left {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(0,-50%);
+    cursor: pointer;
+  }
+}

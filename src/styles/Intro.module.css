@@ -1,24 +1,14 @@
-.layout {
-  box-sizing: border-box;
-  border: 10px solid white;
-}
-
 .imageWrapper {
-  width: 100%;
-  height: 40vh;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-.imageWrapper_image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: bottom;
+  height: 50vh;
+  width: 100vw;
+  margin-bottom: 50px;
 }
 
 .textWrapper {
   box-sizing: border-box;
-  height: 50vh;
+  padding: 5%;
+  border: 10px solid #efefef;
+  text-overflow: ellipsis;
 }
 .textWrapper_text {
   font-size: small;

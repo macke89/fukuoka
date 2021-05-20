@@ -4,8 +4,61 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all .6s;
+  cursor: pointer;
 
   &:nth-child(odd) {
     background-color: darkcyan;
+    color: white;
+
+    &:hover, :focus {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  &:nth-child(even) {
+    color: darkcyan;
+
+    &:hover, :focus {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: darkcyan;
+  color: white;
+
+  &_imageWrapper {
+    height: 50vh;
+    width: 100vw;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_close {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 5%;
+    }
+
+    &_image {
+      object-fit: cover;
+    }
+  }
+
+  &_text {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
