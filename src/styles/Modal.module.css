@@ -1,0 +1,39 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+.layout_modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.layout_modal_imageWrap {
+  height: 50vh;
+  overflow: hidden;
+}
+.layout_modal_imageWrap_image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.layout_modal_imageWrap_close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  cursor: pointer;
+}
+.layout_modal_text {
+  box-sizing: border-box;
+  height: 50vh;
+  padding: 10px;
+  font-size: 14px;
+  border: 10px solid #efefef;
+}
+
+/*# sourceMappingURL=Modal.module.css.map */

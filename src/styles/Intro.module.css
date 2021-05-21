@@ -1,17 +1,18 @@
-.imageWrapper {
-  height: 50vh;
-  width: 100vw;
-  margin-bottom: 50px;
+.layout {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: stretch;
 }
-
-.textWrapper {
+.layout_imageWrapper {
+  width: 100vw;
+  height: 70vh;
+}
+.layout_textWrapper {
+  height: 30vh;
   box-sizing: border-box;
   padding: 5%;
   border: 10px solid #efefef;
-  text-overflow: ellipsis;
-}
-.textWrapper_text {
-  font-size: small;
 }
 
 /*# sourceMappingURL=Intro.module.css.map */

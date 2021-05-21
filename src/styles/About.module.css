@@ -1,16 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 900px) {
+  .layout {
+    flex-direction: row;
+  }
+}
+
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   width: 100vw;
   height: 50vh;
   border: 10px solid #055d5d;
-  padding: 5%;
-  padding-top: 20%;
   background-color: darkcyan;
   color: white;
+}
+@media only screen and (min-width: 900px) {
+  .info {
+    height: 100vh;
+  }
 }
 .info_text {
   display: flex;
@@ -28,6 +41,11 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+@media only screen and (min-width: 900px) {
+  .links {
+    height: 100vh;
+  }
 }
 .links_text {
   display: flex;

@@ -1,3 +1,12 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 900px){
+    flex-direction: row;
+  }
+}
+
 .place {
   width: 100vw;
   height: 50vh;
@@ -6,6 +15,9 @@
   justify-content: center;
   transition: all .6s;
   cursor: pointer;
+  @media only screen and (min-width: 900px){
+    height: 100vh;
+  }
 
   &:nth-child(odd) {
     background-color: darkcyan;
@@ -27,38 +39,3 @@
   }
 }
 
-.modal {
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: darkcyan;
-  color: white;
-
-  &_imageWrapper {
-    height: 50vh;
-    width: 100vw;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &_close {
-      cursor: pointer;
-      position: absolute;
-      top: 20px;
-      left: 5%;
-    }
-
-    &_image {
-      object-fit: cover;
-    }
-  }
-
-  &_text {
-    height: 50vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-}

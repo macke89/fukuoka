@@ -1,17 +1,18 @@
-.imageWrapper {
-  height: 50vh;
-  width: 100vw;
-  //overflow: hidden;
-  margin-bottom: 50px;
-}
+.layout {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: stretch;
 
-.textWrapper {
-  box-sizing: border-box;
-  padding: 5%;
-  border: 10px solid #efefef;
-  text-overflow: ellipsis;
+  &_imageWrapper {
+    width: 100vw;
+    height: 70vh;
+  }
 
-  &_text {
-    font-size: small;
+  &_textWrapper {
+    height: 30vh;
+    box-sizing: border-box;
+    padding: 5%;
+    border: 10px solid #efefef;
   }
 }
