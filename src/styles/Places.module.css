@@ -34,8 +34,7 @@
   color: darkcyan;
 }
 .place:nth-child(even):hover, .place:nth-child(even) :focus {
-  background-color: black;
-  color: white;
+  color: black;
 }
 
 /*# sourceMappingURL=Places.module.css.map */
