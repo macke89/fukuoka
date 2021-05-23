@@ -8,36 +8,14 @@ import {IoIosText} from 'react-icons/io';
 import {motion} from "framer-motion";
 
 
-const About = () => {
-    const containerVariants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                ease: 'easeInOut',
-                delay: .2,
-                duration: .4,
-            }
-        },
-        exit: {
-            opacity: 0,
-            scale: 0,
-            transition: {
-                ease: 'easeInOut',
-                delay: .2,
-                duration: .4,
-            }
-        }
-    }
+const About = (props) => {
     return (
         <motion.div
             className={AboutCSS.layout}
-            variants={containerVariants}
-            inital="hidden"
-            animate="visible"
-            exit="exit">
+            variants={props.pageAnimation}
+            initial="initial"
+            animate="in"
+            exit="out">
             <div className={AboutCSS.info}>
                 <div className={AboutCSS.info_text}>
                     <CgNametag size={'40px'} color={'white'}/>

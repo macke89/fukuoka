@@ -5,24 +5,64 @@ import About from './sites/About';
 import Intro from "./sites/Intro";
 import Places from "./sites/Places";
 import { AnimatePresence } from "framer-motion";
+import React from 'react';
+
+// Checks width of browser window
+const useViewport = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
+    // Return the width so we can use it in our components
+    return {width};
+}
 
 function App() {
+    const {width} = useViewport();
+    const breakpoint900 = 900; // Breakpoint for Responsive Design
+
     const location = useLocation()
+    const pageAnimation = {
+        initial: {
+            opacity: 0,
+            transition: {
+                duration: .5,
+            }
+        },
+
+        in: {
+            opacity: 1,
+            transition: {
+                duration: .5,
+            }
+        },
+
+        out: {
+            opacity: 0,
+            transition: {
+                duration: .5,
+            }
+        },
+    }
     return (
         <AnimatePresence exitBeforeEnter>
             <Header/>
-            <Switch location={location} key={location.key}>
+            <Switch location={location} key={location.pathname}>
                 <Route exact path="/" >
-                    <Home/>
+                    <Home pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
                 </Route>
                 <Route exact path="/about">
-                    <About/>
+                    <About pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
                 </Route>
                 <Route exact path="/intro">
-                    <Intro/>
+                    <Intro pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
                 </Route>
                 <Route exact path="/places">
-                    <Places/>
+                    <Places pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
                 </Route>
             </Switch>
         </AnimatePresence>

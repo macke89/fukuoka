@@ -26,29 +26,7 @@ const data = {
     }
 }
 
-const Places = () => {
-        const containerVariants = {
-            hidden: {
-                opacity: 0,
-            },
-            visible: {
-                opacity: 1,
-                transition: {
-                    ease: 'easeInOut',
-                    delay: .2,
-                    duration: .4,
-                }
-            },
-            exit: {
-                opacity: 0,
-                scale: 0,
-                transition: {
-                    ease: 'easeInOut',
-                    delay: .2,
-                    duration: .4,
-                }
-            }
-        }
+const Places = (props) => {
         const [modal, setModal] = useState(false);
         const [place, setPlace] = useState(['tesaa', Uminonakamichi]);
 
@@ -56,15 +34,13 @@ const Places = () => {
             setPlace([text, image])
             return setModal(() => modal => !modal);
         }
-
-        console.log(modal);
         return (
             <motion.div
                 className={PlacesCSS.layout}
-                variants={containerVariants}
-                inital="hidden"
-                animate="visible"
-                exit="exit">
+                variants={props.pageAnimation}
+                initial="initial"
+                animate="in"
+                exit="out">
                 <div className={PlacesCSS.place} onClick={() => toggle(data.umino.text, data.umino.image)}>
                     <GiBonsaiTree size={'150px'}/>
                 </div>

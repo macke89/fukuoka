@@ -10,36 +10,14 @@ import AwesomeSlider from 'react-awesome-slider';
 import '../styles/custom.css';
 import {motion} from "framer-motion";
 
-const Intro = () => {
-    const containerVariants = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                ease: 'easeInOut',
-                delay: .2,
-                duration: .4,
-            }
-        },
-        exit: {
-            opacity: 0,
-            scale: 0,
-            transition: {
-                ease: 'easeInOut',
-                delay: .2,
-                duration: .4,
-            }
-        }
-    }
+const Intro = (props) => {
     return (
         <motion.div
             className={IntroCSS.layout}
-            variants={containerVariants}
-            inital="hidden"
-            animate="visible"
-            exit="exit">
+            variants={props.pageAnimation}
+            initial="initial"
+            animate="in"
+            exit="out">
             <div className={IntroCSS.layout_imageWrapper}>
                 <AwesomeSlider>
                     <div data-src={imageOne}/>
