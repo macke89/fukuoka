@@ -25,8 +25,8 @@ const Header = (props) => {
                 <nav className={HeaderCSS.desktopNav}>
                     <Link to="/" onClick={toggle}>Home</Link>
                     <Link to="/intro" onClick={toggle}>Intro</Link>
-                    <Link to="/places" onClick={toggle}>Places</Link>
-                    <Link to="/about" onClick={toggle}>About</Link>
+                    <Link to="/places" onClick={toggle} className={HeaderCSS.right}>Places</Link>
+                    <Link to="/about" onClick={toggle} className={HeaderCSS.right}>About</Link>
                 </nav>
             }
 

@@ -14,9 +14,21 @@
   left: 50%;
   transform: translate(-50%,0);
   display: flex;
-  width: 30vw;
+  width: 40vw;
   justify-content: space-between;
   color: white;
+
+  & a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+
+    &:hover {
+      color: #0ababa;
+      transition: all .3s;
+    }
+  }
 }
 
 .nav {
@@ -42,3 +54,10 @@
   }
 }
 
+.right {
+  color: darkcyan !important;
+
+  &:hover {
+    color: #0ababa;
+  }
+}
