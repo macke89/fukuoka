@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {motion} from "framer-motion";
 import {useState} from "react";
 
-const Header = () => {
+const Header = (props) => {
     const [isOpen, setIsOpen] = useState(false)
     const variants = {
         open: {
@@ -19,9 +19,18 @@ const Header = () => {
 
     return (
         <>
-            <div className={HeaderCSS.menu}>
+            {props.width < props.breakpoint900 ? <div className={HeaderCSS.menu}>
                 <CgMenuGridR size={'40px'} color={'white'} onClick={toggle}/>
-            </div>
+            </div> :
+                <nav className={HeaderCSS.desktopNav}>
+                    <Link to="/" onClick={toggle}>Home</Link>
+                    <Link to="/intro" onClick={toggle}>Intro</Link>
+                    <Link to="/places" onClick={toggle}>Places</Link>
+                    <Link to="/about" onClick={toggle}>About</Link>
+                </nav>
+            }
+
+
             <motion.nav
                 className={HeaderCSS.nav}
                 animate={isOpen ? "open" : "closed"}

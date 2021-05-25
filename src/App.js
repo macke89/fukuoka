@@ -50,19 +50,19 @@ function App() {
     }
     return (
         <AnimatePresence exitBeforeEnter>
-            <Header/>
+            <Header breakpoint900={breakpoint900} width={width}/>
             <Switch location={location} key={location.pathname}>
                 <Route exact path="/" >
-                    <Home pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
+                    <Home pageAnimation={pageAnimation} width={width} breakpoint900={breakpoint900}/>
                 </Route>
                 <Route exact path="/about">
-                    <About pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
+                    <About pageAnimation={pageAnimation} width={width} breakpoint900={breakpoint900}/>
                 </Route>
                 <Route exact path="/intro">
-                    <Intro pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
+                    <Intro pageAnimation={pageAnimation} width={width} breakpoint900={breakpoint900}/>
                 </Route>
                 <Route exact path="/places">
-                    <Places pageAnimation={pageAnimation} width={width} breakpoint={breakpoint900}/>
+                    <Places pageAnimation={pageAnimation} width={width} breakpoint900={breakpoint900}/>
                 </Route>
             </Switch>
         </AnimatePresence>
