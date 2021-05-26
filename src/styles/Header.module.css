@@ -16,16 +16,23 @@
   display: flex;
   width: 40vw;
   justify-content: space-between;
-  color: white;
 }
 .desktopNav a {
-  color: white;
   text-decoration: none;
   font-size: 19px;
   font-weight: bold;
+  color: white;
 }
 .desktopNav a:hover {
   color: #0ababa;
+  transition: all 0.3s;
+}
+
+.active {
+  color: darkcyan !important;
+}
+.active:hover {
+  color: #0ababa !important;
   transition: all 0.3s;
 }
 
@@ -49,13 +56,6 @@
   text-transform: uppercase;
   font-size: x-large;
   font-weight: bold;
-}
-
-.right {
-  color: darkcyan !important;
-}
-.right:hover {
-  color: #0ababa;
 }
 
 /*# sourceMappingURL=Header.module.css.map */

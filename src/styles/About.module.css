@@ -31,12 +31,15 @@
   gap: 10px;
   font-weight: bold;
 }
+.info_text:last-child {
+  margin-top: 15px;
+}
 
 .links {
-  background-color: #ffffff;
+  background-color: #bac9c9;
   width: 100vw;
   height: 50vh;
-  color: darkcyan;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -51,14 +54,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: darkcyan;
+  color: white;
   text-decoration: none;
   font-size: larger;
   font-weight: bold;
   transition: 0.3s all;
 }
 .links_text:hover {
-  color: #006c75;
+  color: #0ababa;
 }
 
 /*# sourceMappingURL=About.module.css.map */

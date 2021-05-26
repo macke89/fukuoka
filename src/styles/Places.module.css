@@ -7,6 +7,15 @@
     flex-direction: row;
   }
 }
+.layout_spacer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 55px;
+  z-index: 40;
+  background-color: black;
+}
 
 .place {
   width: 100vw;
@@ -27,11 +36,11 @@
   color: white;
 }
 .place:nth-child(odd):hover, .place:nth-child(odd) :focus {
-  background-color: white;
   color: black;
 }
 .place:nth-child(even) {
-  color: darkcyan;
+  color: white;
+  background-color: #bac9c9;
 }
 .place:nth-child(even):hover, .place:nth-child(even) :focus {
   color: black;

@@ -1,7 +1,7 @@
 import React from 'react';
 import {CgMenuGridR} from 'react-icons/cg';
 import HeaderCSS from '../styles/Header.module.css';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {motion} from "framer-motion";
 import {useState} from "react";
 
@@ -23,10 +23,10 @@ const Header = (props) => {
                 <CgMenuGridR size={'40px'} color={'white'} onClick={toggle}/>
             </div> :
                 <nav className={HeaderCSS.desktopNav}>
-                    <Link to="/" onClick={toggle}>Home</Link>
-                    <Link to="/intro" onClick={toggle}>Intro</Link>
-                    <Link to="/places" onClick={toggle} className={HeaderCSS.right}>Places</Link>
-                    <Link to="/about" onClick={toggle} className={HeaderCSS.right}>About</Link>
+                    <NavLink exact to="/" onClick={toggle} activeClassName={HeaderCSS.active}>Home</NavLink>
+                    <NavLink exact to="/intro" onClick={toggle} activeClassName={HeaderCSS.active}>Intro</NavLink>
+                    <NavLink exact to="/places" onClick={toggle} activeClassName={HeaderCSS.active}>Places</NavLink>
+                    <NavLink exact to="/about" onClick={toggle} activeClassName={HeaderCSS.active}>About</NavLink>
                 </nav>
             }
 

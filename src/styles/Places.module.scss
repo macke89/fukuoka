@@ -5,6 +5,16 @@
   @media only screen and (min-width: 900px){
     flex-direction: row;
   }
+
+  &_spacer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 55px;
+    z-index: 40;
+    background-color: black;
+  }
 }
 
 .place {
@@ -24,16 +34,17 @@
     color: white;
 
     &:hover, :focus {
-      background-color: white;
+      //background-color: black;
       color: black;
     }
   }
 
   &:nth-child(even) {
-    color: darkcyan;
+    color: white;
+    background-color: #bac9c9;
 
     &:hover, :focus {
-      //background-color: black;
+      //background-color: darkcyan;
       color: black;
     }
   }

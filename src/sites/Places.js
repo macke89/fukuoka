@@ -41,6 +41,7 @@ const Places = (props) => {
                 initial="initial"
                 animate="in"
                 exit="out">
+                {/*{props.width > props.breakpoint900 && <div className={PlacesCSS.layout_spacer}></div>}*/}
                 <div className={PlacesCSS.place} onClick={() => toggle(data.umino.text, data.umino.image)}>
                     <GiBonsaiTree size={'150px'}/>
                 </div>
