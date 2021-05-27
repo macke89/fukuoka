@@ -1,0 +1,49 @@
+.layout {
+  background: rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: 3px solid darkcyan;
+}
+@media only screen and (min-width: 900px) {
+  .modal {
+    width: 70%;
+    height: auto;
+  }
+}
+.modal_imageWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+}
+.modal_imageWrapper_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.modal_imageWrapper_icon {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  cursor: pointer;
+}
+.modal_text {
+  padding: 1%;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/*# sourceMappingURL=TransitionsModal.module.css.map */
