@@ -7,6 +7,7 @@ import {AiFillCloseCircle} from 'react-icons/ai';
 import Modal from "../components/Modal";
 import Uminonakamichi from "../images/marianna-berno-PfYn2omgT4M-unsplash.jpg";
 import RadioTower from "../images/johanna-9TXjJITjs5k-unsplash.jpg";
+import TransitionsModal from "../components/TransitionsModal";
 
 const data = {
     umino: {
@@ -27,13 +28,14 @@ const data = {
 }
 
 const Places = (props) => {
-        const [modal, setModal] = useState(false);
-        const [place, setPlace] = useState(['tesaa', Uminonakamichi]);
+        // const [modal, setModal] = useState(false);
+        // const [place, setPlace] = useState(['tesaa', Uminonakamichi]);
+        //
+        // function toggle(text, image) {
+        //     setPlace([text, image])
+        //     return setModal(() => modal => !modal);
+        // }
 
-        function toggle(text, image) {
-            setPlace([text, image])
-            return setModal(() => modal => !modal);
-        }
         return (
             <motion.div
                 className={PlacesCSS.layout}
@@ -41,16 +43,20 @@ const Places = (props) => {
                 initial="initial"
                 animate="in"
                 exit="out">
-                {/*{props.width > props.breakpoint900 && <div className={PlacesCSS.layout_spacer}></div>}*/}
-                <div className={PlacesCSS.place} onClick={() => toggle(data.umino.text, data.umino.image)}>
+                <TransitionsModal text={data.umino.text} image={data.umino.image}>
+                    {/*{props.width > props.breakpoint900 && <div className={PlacesCSS.layout_spacer}></div>}*/}
+                    {/*<div className={PlacesCSS.place} onClick={() => toggle(data.umino.text, data.umino.image)}>*/}
                     <GiBonsaiTree size={'150px'}/>
-                </div>
-                <div className={PlacesCSS.place} onClick={() => toggle(data.radioTower.text, data.radioTower.image)}>
+                    {/*</div>*/}
+                </TransitionsModal>
+                <TransitionsModal text={data.radioTower.text} image={data.radioTower.image}>
+                    {/*<div className={PlacesCSS.place} onClick={() => toggle(data.radioTower.text, data.radioTower.image)}>*/}
                     <VscRadioTower size={'150px'}/>
-                </div>
-                {modal && (
-                    <Modal place={place} modal={modal} setModal={setModal}/>
-                )}
+                    {/*</div>*/}
+                    {/*{modal && (*/}
+                    {/*    <Modal place={place} modal={modal} setModal={setModal}/>*/}
+                    {/*)}*/}
+                </TransitionsModal>
             </motion.div>
         );
     }
